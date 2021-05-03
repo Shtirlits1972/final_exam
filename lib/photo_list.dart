@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'details_view.dart';
 import 'model/photo_crud.dart';
 import 'model/photo_repo.dart';
-import 'model/photos.dart';
+import 'model/photo.dart';
 
 class PhotoList extends StatefulWidget {
   PhotoList({Key key}) : super(key: key);

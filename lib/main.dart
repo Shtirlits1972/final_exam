@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'model/photo_crud.dart';
 import 'model/photo_repo.dart';
-import 'model/photos.dart';
+import 'model/photo.dart';
 
 void main() {
   runApp(
@@ -49,8 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future loadPhotos(BuildContext context) async {
     // ignore: non_constant_identifier_names
-    photo_crud photoCrud = photo_crud();
-    List<photos> list2 = await photoCrud.getAll();
+    PhotoCrud photoCrud = PhotoCrud();
+    List<Photo> list2 = await photoCrud.getAll();
     setState(() {
       Provider.of<photo_repo>(context, listen: false).setList(list2);
     });

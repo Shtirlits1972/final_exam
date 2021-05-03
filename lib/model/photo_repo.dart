@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-import 'photos.dart';
+import 'photo.dart';
 
 class photo_repo with ChangeNotifier {
-  List<photos> _photosList = List<photos>();
+  List<Photo> _photosList = List<Photo>();
 
-  List<photos> get getPhotos => _photosList;
+  List<Photo> get getPhotos => _photosList;
 
-  void addPhoto(photos newPhoto) {
+  void addPhoto(Photo newPhoto) {
     _photosList.add(newPhoto);
   }
 
-  void setList(List<photos> listInput) {
+  void setList(List<Photo> listInput) {
     _photosList = listInput;
   }
 
   int get length =>_photosList.length;
 
-   photos getItem(int index)
+   Photo getItem(int index)
    {
      return _photosList.elementAt(index);
    }

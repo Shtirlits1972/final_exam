@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-class photos {
+class Photo {
   String id;
   String title;
   String src;
 
-    photos({
+    Photo({
     @required this.id,
     @required this.title,
     @required this.src

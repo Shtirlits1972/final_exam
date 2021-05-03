@@ -1,16 +1,14 @@
-import 'package:final_exam/model/photo_repo.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
-import 'package:flutter/material.dart';
 import 'package:final_exam/constants.dart';
-import 'package:final_exam/model/photos.dart';
+import 'package:final_exam/model/photo.dart';
 
-class photo_crud{
+class PhotoCrud{
 
-Future<List<photos>> getAll() async {
+Future<List<Photo>> getAll() async {
     // ignore: deprecated_member_use
-    List<photos> list = List<photos>();
+    List<Photo> list = List<Photo>();
 
     try {
 
@@ -25,7 +23,7 @@ Future<List<photos>> getAll() async {
         var allData = (json.decode(data)['photos'] as List<dynamic>);
         for (int i = 0; i < allData.length; i++) {
 
-          photos photosOne = photos(
+          Photo photosOne = Photo(
             id: allData[i]['id'],
             title: allData[i]['title'],
             src: allData[i]['src']
